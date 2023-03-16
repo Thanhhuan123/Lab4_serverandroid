@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const cal = require("../../../../ServerAndroid/Demo2/caculator.js/index.js");
+
+const cal = require("./caculator.js");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname));
@@ -14,7 +15,6 @@ app.post("/", (req, res) => {
   const soA = Number(req.body.soA);
   const soB = Number(req.body.soB);
   const operator = req.body.operator;
-
 
 
   switch (operator) {
