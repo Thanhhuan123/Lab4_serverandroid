@@ -18,6 +18,7 @@ app.set('views', './views');
 app.get('/', (req, res) => {
   res.render('home', {layout: 'page2'});
 });
+//
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
