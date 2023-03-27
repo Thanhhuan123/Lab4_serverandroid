@@ -20,18 +20,18 @@ const svModel = require("./svModel");
 
 app.get('/addSV', async function (req, res){
 
-  
   console.log(req.body)
   await mongoose.connect(uri).then(console.log("Ket noi DB thanh cong!!"));
 
   const sv  = new svModel();
   sv.ten = "Dinh Thanh Huan";
-  sv.tuoi = 20;
+  sv.tuoi = 22;
   sv.diachi = "Ha Noi";
 
   console.log('vao day')
 
   console.log(sv)
+  
 
   try {
     await sv.save();
